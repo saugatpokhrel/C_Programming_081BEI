@@ -1,3 +1,0 @@
-dhoom1 150
-dhoom2 100
-dhoom3 270
