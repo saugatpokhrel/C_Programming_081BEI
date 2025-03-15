@@ -1,64 +1,76 @@
-# C Programming Project Submission
+# Theater Management System
 
-Welcome to the **C Programming Project Repository (081BEI)**. Each team is required to submit their project by following the instructions below.
+## Overview
 
-## 📌 Submission Instructions
+The **Theater Management System** is a console-based application written in **C** that allows admins to manage movies, add movies,remove movies and see sales information. Customers can search for movies and book seats for a movie accordingly.
 
-1. **One team member forks this repository** into their GitHub account (Team Lead):
-   - Go to the instructor's repository: [C_Programming_081BEI](https://github.com/prajwolpakka/C_Programming_081BEI).
-   - Click the **Fork** button at the top-right corner to create a copy under your GitHub account.
+## Features
 
-2. **The entire team clones the forked repository**:
+### Admin Panel
+
+- **Admin Login**: Secure access to admin functionalities using the following credentials:
+  - **Username**: admin  
+  - **Password**: admin  
+- **Add movie**: Add new movies to the movies list.
+- **Remove Bookings**: Admin can remove the movies from the list.
+- **View Bookings**: View booking for all the movies along with bookings made by an user.
+
+
+### User Panel
+
+- **Create account**: Users can create account which helps them to book movie and store data about the movies booked.
+- **Search Movies**: Users can search for movies
+- **Select Seats**: Users can select seats for  movies they want to see
+
+
+
+## Installation
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/TEAM_LEAD_USERNAME/C_Programming_081BEI.git
+   git clone https://github.com/yourusername/C_Programming_081BEI.git
+   ```
+2. Navigate to the project branch:
+   ```bash
+   cd 36394448
+   ```
+3. Navigate to code dictionary:
+   ```bash
+   cd code
+   ```
+3. Compile the C program:
+   ```bash
+    gcc main.c init.c admin.c -o main
+
+   ```
+4. Run the executable:
+   ```bash
+   ./main
    ```
 
-3. **Create a new branch** for your team using your roll numbers in ascending order, formatted as two-digit numbers.  
-   - Example: If the team consists of roll numbers **1, 4, 5, 45**, the branch name should be:
-     ```
-     01040545
-     ```
-   - Create the branch using the following command:
-     ```bash
-     git checkout -b 01040545
-     ```
+## Usage
 
-4. **Make changes in your cloned repository** by adding project files inside a folder named after your branch name:
-   - `01040545/proposal/` → Your project proposal document.
-   - `01040545/code/` → Your source code files.
-   - `01040545/report/` → Your final report.
-   - `01040545/slide/` → Presentation slides.
+1. Run the application and choose between **Admin** and **User** modes.
+2. If you are an **admin**, enter the login credentials (**Username: admin, Password: admin**) and perform  management tasks.
+3. If you are a **User**, search for movies,select seats and get your ticket
+4. Exit the program after completing your session.
 
-5. **Commit and push changes** to the forked repository:
-   ```bash
-   git add .
-   git commit -m "Added project submission for team 01040545"
-   git push origin 01040545
-   ```
+## Code Structure
 
-6. **The Team Lead opens a Pull Request (PR)** from their forked repository to the `main` branch of this repository.
-7. **Submit the PR link** to the instructor for review.
+- `main.c`: Main source file containing all functionalities.
+- `admin.c`: Handles admin-related operations.
+- `init.c`: Manages initial inits.
+- `defs.h`: Stores global variables and functions.
+- `bookings.txt`: Stores  bookings data.
+- `users.txt`: Stores  user data.
+- `movies.txt`: Stores  movies data.
+- `Makefile`: Stores  compilation instructions.
 
-## 📂 Folder Structure
-Ensure your files are placed inside a folder named after your branch name:
-```
-C_Programming_081BEI/
-│-- 01040545/
-│   │-- proposal/
-│   │   ├── team_project_proposal.pdf
-│   │-- code/
-│   │   ├── main.c
-│   │   ├── additional_files.c
-│   │-- report/
-│   │   ├── team_project_report.pdf
-│   │-- slide/
-│   │   ├── team_presentation.pdf
-```
+## Future Enhancements
 
-## ❗ Important Notes
-- Each team should submit only **one PR** per group.
-- The **branch name must follow the roll number format** to avoid confusion.
-- Ensure your code is well-documented and formatted correctly.
-
-For any questions, contact the instructor. Happy coding! 🚀
-
+- Implement **User Login** with additional functionalities such as bookings  history.
+- Add a **Graphical User Interface (GUI)** for better user experience.
+- Add a **Movies Scheduling System** for better user experience and theater management.
+- Introduce a **database system (MySQL or SQLite)** for persistent storage.
+- Implement **movies recommendations** based on customer preferences.
+- Enhance **security measures** for login credentials.
